@@ -1,0 +1,285 @@
+section
+{
+    padding: 5rem 9%;
+}
+
+.home
+{
+    padding: 0;
+    margin-top: 2rem;
+}
+.swiper-slide
+{
+    min-height: 100vh;
+    background-size: cover !important;
+    background-position: center !important;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+}
+.content
+{
+    width: 60rem;
+}
+span
+{
+    font-size: 2.4rem;
+    color: var(--main-color);
+    display: block;
+    font-weight: 600;
+}
+.content h3
+{
+    font-size: 4rem;
+    color: #fff;
+    padding: 1rem 0;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.swiper-pagination-bullet
+{
+    height: 1rem;
+    width: 1rem;
+
+    background: #fff;
+    &.swiper-pagination-bullet-active
+    {
+        background: var(--main-color);
+    }
+}
+
+
+.home-section2
+{
+    width: 100%;
+    background: var(--bg-color);
+}
+.home-section2 h3
+{
+    text-align: center;
+    margin: 2.5rem;
+    font-size: 3.5rem;
+    color: var(--main-color);
+    text-transform: capitalize;
+}
+.home-section2 p 
+{
+    font-size: 2rem;
+    text-align: center;
+    text-wrap: wrap;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 4fr));
+    gap: 1rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem
+}
+
+.container .box{
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #fff; /* Set the background color to white */
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    width: 270px;
+    cursor: pointer;
+    transition: .3s ease;
+    border: 2px solid var(--main-color);
+}
+
+ .container .box img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.container .box:hover
+{
+    box-shadow: 0 0 1rem var(--main-color);
+    transform: scale(1.03);
+}
+
+.container .box h4 {
+    padding: .5rem 0;
+    font-size: 2rem;
+    color: #444;
+    margin-top: 5rem;
+}
+
+.about
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--second-bg-color);
+    margin-bottom: 5rem;
+    outline: hidden;
+    min-height: 100vh;
+}
+
+.about-content
+{
+    margin-left: 50px;
+    max-width: 100%;
+}
+.about-img img
+{
+    width: 35vw;
+    position: relative;
+    background-size: 250%;
+    transform: translate(-70px);
+    border: 10px solid var(--main-color);
+}
+.about-img img:hover
+{
+    background-position: 0% 0%;
+}
+
+.heading
+{
+    font-size: 2.4rem;
+    text-align: center;
+}
+.about-content h1
+{
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+.about-content h2
+{
+    text-align: left;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+.about-content h3
+{
+    font-size: 2.6rem;
+}
+.about-content p
+{
+    font-size: 1.5rem;
+    margin: 2rem 0 3rem;
+}
+
+.tab-titles
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tab-titles .tab-links
+{
+    margin-right: 50px; 
+    font-size: 1.7rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 4rem;
+}
+.tab-titles .tab-links::after
+{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--main-color);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: .4s;
+}
+.tab-titles .tab-links.active-link::after
+{
+    width: 100%;
+}
+.tab-contents ul li
+{
+    list-style: none;
+    margin: 1rem 0 2.5rem;
+    font-size: 1.4rem;
+}
+.tab-contents ul li span
+{
+    font-size: 1.6rem;
+}
+.tab-contents
+{
+    display: none;
+}
+.tab-contents.active-tab
+{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 1500px)
+{
+    .container
+    {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .container .box
+    {
+        width: 200px;
+    }
+  
+}
+
+@media(max-width: 991px)
+{
+    section 
+    {
+        padding: 3rem 2rem;
+    }
+    .home .swiper-slide
+    {
+        padding: 2rem 5%;
+    }
+    .content
+    {
+        width: 50rem;
+    }
+    .content h3 
+    {
+        font-size: 3.6rem;
+    }
+    .container
+    {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
+    .container .box
+    {
+        width: 100%;
+    }
+}
+@media(max-width: 455px)
+{
+    .container
+    {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .swiper-slide
+    {
+        min-height: 70vh;
+    }
+    .about
+    {
+        flex-direction: column;
+    }
+    .about img 
+    {
+        transform: translate(0px);
+        width: 100%;
+    }
+}

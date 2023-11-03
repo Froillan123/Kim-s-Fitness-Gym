@@ -20,7 +20,7 @@
     --scrollbar-track: #F0F0F0;
     --scrollbar-thumb: #CCCCCC;
     --lightmode-bg-color: #f0f0f0;
-    --lightmode-second-bg-color: #ffffff;
+    --lightmode-second-bg-color: #ffff;
     --lightmode-text-color: #333333;
     --lightmode-main-color: #FF5733;
     --black:#444;
@@ -66,18 +66,21 @@ html
     font-size: 62.5%;
 }
 .header {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 2rem 9%;
     background: var(--bg-color);
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     z-index: 100;
 }
-
+.header.sticky
+{
+    border-bottom: .4rem solid rgba(0, 0, 0, .2);
+}
 .navbar a
 {
     font-size: 1.8rem;
@@ -86,9 +89,7 @@ html
     position: relative;
     flex: 1;
 }
-.navbar a.highlighted {
-    color: var(--green); /* or the styling you want for active links */
-}
+
 
 .navbar a::after
 {
@@ -148,8 +149,13 @@ html
 .login-form form h3{
     font-size: 2.5rem;
     text-transform: uppercase;
-    color:var(--black);
+    color:var(--green);
     text-align: center;
+}
+.login-form form h4
+{
+    color: #000;
+    font-size: 1.8rem;
 }
 
 .login-form form span{
@@ -183,7 +189,7 @@ html
     text-transform: capitalize;
 }
 
-.login-form form .btn{
+.login-form form .button{
     text-align: center;
     width:100%;
     margin:1.5rem 0;
@@ -212,10 +218,7 @@ html
     font-size: 15px;
   }
 
-.span span
-{
-    color: var(--bg-color);
-}
+
 
 #chat
 {
@@ -258,7 +261,7 @@ html
     background: var(--main-color);
     border-radius: 4rem;
     font-size: 1.9rem;
-    color: var(--bg-color);
+    color: #000;
     letter-spacing: .1rem;
     font-weight: 600;
     margin-bottom: 2rem;
@@ -266,9 +269,22 @@ html
 }
 .btn:hover
 {
-    box-shadow: 0 0 1rem var(--main-color);
+    box-shadow: 0 0 2.1rem var(--main-color);
 }
 
+.button
+{
+    
+    margin-top: 1rem;
+    display:inline-block;
+    padding:.9rem 3rem;
+    border-radius: .5rem;
+    color:#fff;
+    background: var(--green);
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+}
 
 
 
@@ -348,21 +364,13 @@ html
     line-height: 3;
    }
 }
-@media(max-width: 881px)
-{
-    #menu-icon
-    {
-        margin-left: 0;
-    }
-}
-@media(max-width: 768px)
-{   
 
+@media(max-width: 980px)
+{
     #menu-icon 
     {
         display: block;
         cursor: pointer;
-        margin-left: 25rem;
     }
     #icon
     {
@@ -399,6 +407,11 @@ html
     {
      width: 0;
     }
+}
+@media(max-width: 768px)
+{   
+
+   
     #loginbtn
     {
         font-size: 3rem;
@@ -413,28 +426,7 @@ html
     }
     
 }
-@media(max-width: 660px)
-{
-    #menu-icon
-    {
-        margin-left: 22rem;
-    }
-}
-@media(max-width: 596px)
-{
-    #menu-icon
-    {
-        margin-left: 20rem;
-    }
-}
-@media(max-width: 490px)
-{
-    #menu-icon
-    {
-        margin-left: 9rem;
-    }
-    
-}
+
 
 @media(max-width: 365px)
 {
@@ -465,7 +457,6 @@ html
     #chat
     {
         font-size: 3rem;
-        right: 20px;
     }
     .navbar a
     {
