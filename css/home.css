@@ -125,19 +125,14 @@ span
     margin-left: 50px;
     max-width: 100%;
 }
-.about-img img
-{
+.about-img img {
     width: 35vw;
     position: relative;
     background-size: 250%;
     transform: translate(-70px);
     border: 10px solid var(--main-color);
+    transition: opacity 0.5s; /* Add a 0.5-second opacity transition */
 }
-.about-img img:hover
-{
-    background-position: 0% 0%;
-}
-
 .heading
 {
     font-size: 2.4rem;
@@ -145,6 +140,7 @@ span
 }
 .about-content h1
 {
+    color: var(--main-color);
     font-size: 5rem;
     margin-bottom: 2rem;
 }
@@ -162,55 +158,9 @@ span
 {
     font-size: 1.5rem;
     margin: 2rem 0 3rem;
+    word-spacing: 1px;
 }
 
-.tab-titles
-{
-    display: flex;
-    flex-wrap: wrap;
-}
-.tab-titles .tab-links
-{
-    margin-right: 50px; 
-    font-size: 1.7rem;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
-    margin-bottom: 4rem;
-}
-.tab-titles .tab-links::after
-{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: var(--main-color);
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: .4s;
-}
-.tab-titles .tab-links.active-link::after
-{
-    width: 100%;
-}
-.tab-contents ul li
-{
-    list-style: none;
-    margin: 1rem 0 2.5rem;
-    font-size: 1.4rem;
-}
-.tab-contents ul li span
-{
-    font-size: 1.6rem;
-}
-.tab-contents
-{
-    display: none;
-}
-.tab-contents.active-tab
-{
-    display: block;
-}
 
 
 

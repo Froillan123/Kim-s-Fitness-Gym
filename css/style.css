@@ -222,7 +222,7 @@ html
 
 #chat
 {
-    font-size: 3.3rem;
+    font-size: 3rem;
     color: var(--text-color);
     cursor: pointer;
     background: transparent;
@@ -232,7 +232,7 @@ html
 }
 #menu-icon
 {
-    font-size: 3.6rem;
+    font-size: 3rem;
     color: var(--text-color);
     display: none;
 }
@@ -250,7 +250,7 @@ html
 }
 #loginbtn
 {
-    font-size: 3.6rem;
+    font-size: 3rem;
     color: var(--text-color);
     cursor: pointer;
 }
@@ -420,10 +420,7 @@ html
     {
         width: 0;
     }
-    #chat:hover::after
-    {
-        width: 0;
-    }
+
     
 }
 
@@ -445,18 +442,6 @@ html
     .logo
     {
         font-size: 1.8rem;
-    }
-    #menu-icon
-    {
-        font-size: 3rem;
-    }
-    #loginbtn
-    {
-        font-size: 3rem;
-    }
-    #chat
-    {
-        font-size: 3rem;
     }
     .navbar a
     {
