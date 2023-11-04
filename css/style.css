@@ -20,7 +20,7 @@
     --scrollbar-track: #F0F0F0;
     --scrollbar-thumb: #CCCCCC;
     --lightmode-bg-color: #f0f0f0;
-    --lightmode-second-bg-color: #ffff;
+    --lightmode-second-bg-color: rgb(207, 198, 198);
     --lightmode-text-color: #333333;
     --lightmode-main-color: #FF5733;
     --black:#444;
@@ -28,6 +28,7 @@
     --border-hover:.1rem solid var(--black);
     --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
     --green:#27ae60;
+    --grid-gap: 3rem;
 }
 
 .light-mode {
@@ -352,9 +353,7 @@ html
     html
     {
         font-size: 55%;
-    }
-
-    
+    }    
 }
 
 @media(max-width: 1010px)
@@ -384,7 +383,7 @@ html
         top: 100%;
         left: 0;
         width: 100%;
-        padding: 1rem 3%;
+        padding: .10rem 1%;
         background: var(--bg-color);
         border-top: .1rem solid rgba(0, 0, 0, .2);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
@@ -399,7 +398,7 @@ html
     {
         display: block;
         font-size: 1.8rem;
-        margin: 3rem 0;
+        margin: 2rem 0;
          
     }
     .navbar a:hover::after, 
@@ -423,7 +422,13 @@ html
 
     
 }
-
+@media(max-width: 455px)
+{
+    html 
+    {
+        font-size: 45%;
+    }
+}
 
 @media(max-width: 365px)
 {
