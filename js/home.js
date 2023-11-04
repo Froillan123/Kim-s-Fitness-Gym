@@ -94,7 +94,6 @@ const autoPlay = () => {
     timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2000);
 }
 autoPlay();
-document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
