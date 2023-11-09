@@ -14,21 +14,26 @@ var swiper = new Swiper(".home-slider", {
     },
 });
 
-// Define an array of image URLs you want to cycle through
-const imageUrls = ["images/02.jpg", "images/about2.jpg", "images/about1.png"];
+document.addEventListener("DOMContentLoaded", function() {
+  
 
-const imgElement = document.getElementById("about-img");
-let currentImageIndex = 0;
+  const imageUrls = ["images/02.jpg", "images/about2.jpg", "images/about1.png"];
+  const imgElement = document.getElementById("about-img");
+  let currentImageIndex = 0;
 
-function changeImage() {
-    imgElement.src = imageUrls[currentImageIndex];
-    currentImageIndex = (currentImageIndex + 1) % imageUrls.length;
-}
+  function changeImage() {
+      imgElement.src = imageUrls[currentImageIndex];
+      currentImageIndex = (currentImageIndex + 1) % imageUrls.length;
+  }
+
+
+  setInterval(changeImage, 2000);
+});
 
 const carousel = document.querySelector(".card");
         const cardWidth = carousel.querySelectorAll(".card").offsetWidth;
         let currentCardIndex = 0;
-        const maxScreenWidth = 0; // Maximum screen width for full card width
+        const maxScreenWidth = 0; 
 
         function changeCard() {
             currentCardIndex = (currentCardIndex + 1) % carousel.children.length;
@@ -69,39 +74,6 @@ function scrollCarousel(direction) {
     });
 }
 
-$('.carousel').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
-      
   
 
 document.addEventListener('DOMContentLoaded', () => {
