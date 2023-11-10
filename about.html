@@ -6,6 +6,8 @@
     <title>Kim's Fitness Gym</title>
     <!-- favicon -->
     <link rel="shortcut icon" type="images/png" href="images/favicon.png">
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -28,34 +30,78 @@
         <div class="icons">
             <i class='bx bx-menu' id="menu-icon"></i>
             <div class='bx bxs-user' id="loginbtn"></div>
+            <a href="contact.html"><i class='bx bxs-chat'id="chat"></i></a>
             <div class="login-form">
 
             <div id="close-login-btn" class="fas fa-times"></div>
          <form action="index.html" id="form">
                 <h3>sign in</h3>
-                <span class="span">username</span>
+                <h4>Username</h4>
                 <input type="email" name="" class="box" placeholder="Enter your email" id="username">
-                <span class="span">password</span>
+                <h4>Password</h4>
                 <input type="password" name="" class="box" placeholder="Enter your password" id="password">
                 <div id="error"></div>
                 <div class="checkbox">
                     <input type="checkbox" name="" id="remember-me">
                     <label for="remember-me"> remember me</label>
                 </div>
-                <input type="submit" value="sign in" class="btn">
+                <input type="submit" value="sign in" class="button">
                 <p>Forgot password? <a href="forgot pass and create acc/forgot.html">Click Here</a></p> 
                 <p>don't have an account ? <a href="forgot pass and create acc/signup.html" id="sign_up">create one</a></p>
             </form>
             </div>
             <div id="error"></div>
-        <a href="contact.html"><i class='bx bxs-chat'id="chat"></i></a>
     </div>
     </header>
 
 
-    <div class="title-about">
+    <div class="title-about" id="title-about">
         <h1>About Us</h1>
     </div>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/people.jpg" class="img" alt="" id="about-img">
+        </div>
+        <div class="about-content">
+            <h1>About Us</h1>
+
+            <h2 class="heading">Kim's Fitness Gym</h2>
+                <p>Welcome to Kim Fitness Gym, your go-to destination for achieving your fitness goals and transforming your life. We are more than just a gym; we're a community dedicated to helping you live a healthier and happier life.</p>
+                <br><br><br>
+            <div class="choose">
+                <h2 class="heading">Why Choose Us</h2>
+            </div>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('facilities', event)">Art Facilities</p>
+                <p class="tab-links" onclick="opentab('trainers', event)">Expert Trainers</p>
+                <p class="tab-links" onclick="opentab('schedule', event)">Flexible Schedule</p>
+            </div>
+            <div class="tab-contents active-tab" id="facilities">
+                <ul>
+                    <li><span>Modern Equipment</span><br>We provide cutting-edge fitness equipment to enhance your workout experience.</li>
+                    <li><span>Spacious Environment</span><br>Enjoy a spacious and comfortable workout space tailored for your convenience.</li>
+                    <li><span>Advanced Technology</span><br>Our facilities incorporate the latest technological innovations for a premium fitness experience.</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="trainers">
+                <ul>
+                    <li><span>Certified Professionals</span><br>Our trainers are certified experts dedicated to guiding you on your fitness journey.</li>
+                    <li><span>Personalized Guidance</span><br>Receive personalized training plans tailored to your fitness goals and preferences.</li>
+                    <li><span>Motivational Support</span><br>Experience motivation and support from our passionate team throughout your fitness journey.</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="schedule">
+                <ul>
+                    <li><span>Flexible Hours</span><br>We offer flexible operating hours, allowing you to choose the best time for your workouts.</li>
+                    <li><span>Convenient Classes</span><br>Join our diverse range of classes designed to fit various schedules and fitness preferences.</li>
+                    <li><span>Open Every Day</span><br>We're open every day to accommodate your fitness routine, ensuring consistency and progress.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    
 
     
 
@@ -80,5 +126,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/about.js"></script>
 </body>
 </html>
