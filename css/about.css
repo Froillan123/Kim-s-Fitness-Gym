@@ -298,7 +298,7 @@ span
 {
 .about
 {
-    flex-direction: column-reverse;
+    flex-direction: column;
 }
 .about img 
 {
@@ -310,4 +310,41 @@ span
 {
     font-size: 7rem;
 }
+}
+@media(max-width: 560px)
+{
+
+    .container
+    {
+        flex-direction: column;
+        gap: 5rem;
+    }
+    .content i 
+    {
+        font-size: 3rem;
+        padding: 1.3rem;
+    }
+    .content span 
+    {
+        font-size: 2rem;
+    }
+    .content p 
+    {
+        font-size: 1.9rem;
+    }
+    .about2 h1 
+    {
+        font-size: 3rem;
+    }
+    .wrapper h1 
+    {
+        font-size: 3.2rem;
+    }
+}
+@media(max-width: 455px)
+{
+    html 
+    {
+        font-size: 45%;
+    }
 }

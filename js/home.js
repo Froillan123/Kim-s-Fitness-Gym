@@ -156,7 +156,16 @@ function prevSlide() {
 
 // Display the initial slide
 showSlide(currentSlideIndex);
+var testimonialInterval = setInterval(nextSlide, 3000);
 
+function stopTestimonialInterval() {
+    clearInterval(testimonialInterval);
+}
+
+testimonialContainer.addEventListener('mouseenter', stopTestimonialInterval);
+testimonialContainer.addEventListener('mouseleave', function () {
+    testimonialInterval = setInterval(nextSlide, 3000);
+});
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -170,5 +179,5 @@ ScrollReveal({
 
 ScrollReveal().reveal('.home-section2, .heading, ', { origin: 'top' });
 ScrollReveal().reveal('.container, .about-content, .wrapper, .home',  { origin: 'bottom' });
-ScrollReveal().reveal('.about-img, .testimonials',  { origin: 'left' });
+ScrollReveal().reveal('.about-img, .testimonials, .box',  { origin: 'left' });
 });

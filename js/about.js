@@ -59,3 +59,16 @@ function updateRandomNumber() {
 
 // Call the updateRandomNumber function every 10 seconds
 setInterval(updateRandomNumber, 10000);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sr = ScrollReveal({ 
+        reset: true,
+        distance: '80px',
+        duration: 1600,
+        delay: 200
+    });
+    
+    sr.reveal('.title-about, .about2', { origin: 'top' });
+    sr.reveal('.container, .about-img, .wrapper', { origin: 'bottom' });
+    sr.reveal('.about', { origin: 'left' });
+});

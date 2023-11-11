@@ -118,7 +118,7 @@ html
 .icons
 {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .login-form{
@@ -374,8 +374,8 @@ html
     #icon
     {
         position: relative;
-        left: -10px;
-         transform: translateY(0%);
+        left: 0px;
+        transform: translateY(0%);
     }
     .navbar
     {
