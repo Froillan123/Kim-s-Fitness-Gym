@@ -347,7 +347,16 @@ span
     margin-bottom: 20px;
     font-size: 2rem;
 }
-
+#prevBtn, #nextBtn 
+{
+    border-radius: 1.1rem;
+    padding: 1.5rem;
+    color: var(--main-color);
+    background: var(--bg-color);
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 3.5rem !important;
+}
 
 @media(max-width: 1500px)
 {

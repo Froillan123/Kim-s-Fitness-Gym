@@ -83,6 +83,82 @@ document.addEventListener('DOMContentLoaded', () => {
     prevButton.addEventListener('click', () => scrollCarousel('prev'));
     nextButton.addEventListener('click', () => scrollCarousel('next'));
 });
+
+var testimonials = [
+    {
+        name: "Axel",
+        stars: 4,
+        content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
+    },
+    {
+        name: "Ericka",
+        stars: 5,
+        content: "I like this gym because the owner is very kind and he recommends me how to execute the technique."
+    },
+    {
+        name: "Richard",
+        stars: 5,
+        content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
+    },
+    // Add more testimonials as needed
+    {
+        name: "Jin",
+        stars: 5,
+        content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
+    },
+    {
+        name: "Joanne",
+        stars: 5,
+        content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
+    },
+    {
+        name: "George",
+        stars: 5,
+        content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
+    },
+];
+
+var testimonialsPerSlide = 3;
+var currentSlideIndex = 0;
+var testimonialContainer = document.getElementById("testimonial-carousel");
+
+function showSlide(index) {
+    var start = index * testimonialsPerSlide;
+    var end = start + testimonialsPerSlide;
+    var slideTestimonials = testimonials.slice(start, end);
+
+    testimonialContainer.innerHTML = slideTestimonials.map(function (testimonial, i) {
+        return `
+            <div class="col">
+                <div class="testimonial">
+                    <img src="images/${start + i + 12}.jpg" alt="">
+                    <div class="name">${testimonial.name}</div>
+                    <div class="stars">
+                        ${Array.from({ length: testimonial.stars }, () => '<i class="fa-solid fa-star"></i>').join('')}
+                        ${Array.from({ length: 5 - testimonial.stars }, () => '<i class="fa-regular fa-star"></i>').join('')}
+                    </div>
+                    <p>${testimonial.content}</p>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+function nextSlide() {
+    currentSlideIndex = (currentSlideIndex + 1) % Math.ceil(testimonials.length / testimonialsPerSlide);
+    showSlide(currentSlideIndex);
+}
+
+function prevSlide() {
+    currentSlideIndex = (currentSlideIndex - 1 + Math.ceil(testimonials.length / testimonialsPerSlide)) % Math.ceil(testimonials.length / testimonialsPerSlide);
+    showSlide(currentSlideIndex);
+}
+
+// Display the initial slide
+showSlide(currentSlideIndex);
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
 ScrollReveal({ 
     reset: true,

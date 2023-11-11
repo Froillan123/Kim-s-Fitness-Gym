@@ -37,3 +37,25 @@ function opentab(tabname, event) {
 
     document.getElementById(tabname).classList.add("active-tab");
 }
+
+
+function updateRandomNumber() {
+    // Select all paragraphs with the id "number-random"
+    var numberParagraphs = document.querySelectorAll("#number-random");
+
+    // Loop through each paragraph and update its content
+    numberParagraphs.forEach(function (paragraph) {
+        // Get the current number in the paragraph
+        var currentNumber = parseInt(paragraph.innerText);
+
+        // Generate a new random number (example: increment by 1)
+        var newNumber = currentNumber + 1;
+
+        // Update the content of the paragraph with the new number
+        paragraph.innerText = newNumber;
+        
+    });
+}
+
+// Call the updateRandomNumber function every 10 seconds
+setInterval(updateRandomNumber, 10000);
