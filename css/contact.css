@@ -99,9 +99,16 @@ section
     resize: none;
 }
 
-.contact-form form .btn {
+.contact-form form .send {
     margin-top: 2rem;
     cursor: pointer;
+    width: 100%;
+    padding: 1rem;
+    border-radius: .8rem;
+    color: var(--text-color);
+    background: var(--main-color);
+    font-size: 2rem;
+    font-weight: 500;
 }
 .map-container
 {
@@ -112,7 +119,7 @@ section
 .map-container iframe {
     margin-top: 4rem;
     width: 50vw;
-    height: 90%;
+    height: 100%;
 }
 @media(max-width: 1330px)
 {
