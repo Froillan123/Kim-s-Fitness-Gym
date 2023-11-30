@@ -13,8 +13,8 @@
 }
 
 :root {
-    --bg-color: #1f242d;
-    --second-bg-color: #323946;
+    --bg-color: #000;
+    --second-bg-color: #212121;
     --text-color: #fff;
     --main-color: #FF0000;
     --scrollbar-track: #F0F0F0;
@@ -26,17 +26,11 @@
     --black:#444;
     --border:.1rem solid rgba(0,0,0,.1);
     --border-hover:.1rem solid var(--black);
-    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --box-shadow:0 0 1rem rgba(0,0,0,.1),
+                0 0 2rem #cccccc
+    ;
     --green:#27ae60;
     --grid-gap: 3rem;
-}
-
-.light-mode {
-    --bg-color: var(--lightmode-bg-color);
-    --second-bg-color: var(--lightmode-second-bg-color);
-    --text-color: var(--lightmode-text-color);
-    --main-color: var(--lightmode-main-color);
-    --second-text-color: #1f242d;
 }
 body
 {
@@ -71,7 +65,7 @@ html
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 9%;
+    padding: 1.5rem 9%;
     background: var(--bg-color);
     display: flex;
     justify-content: space-between;
@@ -84,14 +78,12 @@ html
 }
 .navbar a
 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--text-color);
     margin: .9rem; 
     position: relative;
     flex: 1;
 }
-
-
 .navbar a::after
 {
     content: '';
@@ -110,10 +102,10 @@ html
 }
 .logo
 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     color: var(--main-color);
     font-weight: 600;
-    cursor: default;
+    cursor: pointer;
 }
 .icons
 {
@@ -142,7 +134,6 @@ html
     border:var(--border);
     width:40rem;
     padding:2rem;
-    box-shadow: var(--box-shadow);
     border-radius: .5rem;
     margin:2rem;
 }
@@ -155,7 +146,7 @@ html
 }
 .login-form form h4
 {
-    color: #000;
+    color: green;
     font-size: 1.8rem;
 }
 
@@ -165,15 +156,12 @@ html
     padding-top: 1rem;
 }
 
-.login-form form .box{
+.login-form  form .box1{
     width: 100%;
     margin:.7rem 0;
     font-size: 1.6rem;
-    border:var(--border);
     border-radius: .5rem;
     padding:1rem 1.2rem;
-    color:var(--black);
-    text-transform: none;
 }
 
 .login-form form .checkbox{
@@ -181,6 +169,7 @@ html
     align-items: center;
     gap:.5rem;
     padding:1rem 0;
+    color: red;
 }
 
 .login-form form .checkbox label{
@@ -214,11 +203,6 @@ html
     color:var(--black);
     cursor: pointer;
 }
-#error{
-    color: red;
-    font-size: 15px;
-  }
-
 
 
 #chat
@@ -237,17 +221,7 @@ html
     color: var(--text-color);
     display: none;
 }
-#icon {
-    width: 30px;
-    cursor: pointer;
-    border-radius: 50%;
-    position: absolute;
-    left: 10px; 
-    top: 50%; 
-    transform: translateY(-50%); 
-    background: var(--second-text-color);
-    filter: brightness(2);
-}
+
 #loginbtn
 {
     font-size: 3rem;
@@ -450,5 +424,9 @@ html
     {
         gap: 1;
         font-size: 1.6rem;
+    }
+    .header
+    {
+        padding: 2rem 9%;
     }
 }

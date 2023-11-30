@@ -1,3 +1,4 @@
+
 .title-about
 {
     display: flex;
@@ -12,13 +13,21 @@
 
 .title-about h1 
 {
-    font-size: 8.6rem;
-    color: #fff;
+        font-size: 10rem;
+        background-image: linear-gradient(130deg, #fff, #f0f0f0, #CCCCCC);
+        color: transparent;
+        background-clip: text;
+        background-position: center;
+        background-size: cover;
+        -webkit-background-clip: text;
+        font-weight: 700;
+        text-transform: uppercase;
 }
 section
 {
     padding: 5rem 9%;
 }
+
 span
 {
     color: var(--main-color);
@@ -133,35 +142,37 @@ span
     font-size: 4.4rem;
     color: var(--main-color);
 }
-.container
-{
-    display: flex;
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 10rem;
+    height: 40%;
 }
 
-.content i
-{
+.container div {
+    flex-basis: 100px;
+}
+
+.container div i {
     font-size: 3rem;
-    color: white;
+    padding: 1.5rem;
     background: var(--main-color);
-    padding: 1.7rem;
     border-radius: 50%;
 }
-.content span 
-{
-    font-size: 2.5rem;
-    margin-left: 1.7rem;
-    color: var(--green);
+
+.container div:first-child i {
+    margin-right: 10px;
 }
-.content p 
+
+.container div span {
+    font-size: 2.4rem;
+    color: var(--green);
+    margin-left: 20px;
+}
+.container div p 
 {
-    font-size: 3rem;
-    text-align: center;
-    font-weight: 600;
-    color: var(--main-color);
+    font-size: 2.2rem;
 }
 
 .about-content h1
@@ -227,7 +238,7 @@ span
 } 
 .carousel .card 
 {
-    border-radius: 2rem;
+    border-radius: 1rem;
     height: 342px;
     width: 250px;
     list-style: none;
@@ -311,22 +322,61 @@ span
     font-size: 7rem;
 }
 }
+
+@media (max-width: 768px) {
+    .container div {
+     /* Adjust the width for smaller screens */
+        margin-top: 20px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .container div i {
+        font-size: 2rem;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .container div:first-child i {
+        margin-right: 0px;
+    }
+
+    .container div:nth-child(2) i {
+        margin-right: 0px;
+    }
+
+    .container div span {
+        font-size: 1.8rem;
+        margin-left: 10px;
+    }
+    .container div p
+    {
+        font-size: 2rem;
+        margin-left: 20px;
+    }
+}
 @media(max-width: 560px)
 {
 
+    
     .container
     {
         flex-direction: column;
-        gap: 5rem;
+    }
+    .content
+    {
+        width: auto;
     }
     .content i 
     {
-        font-size: 3rem;
+        font-size: 2rem;
         padding: 1.3rem;
     }
     .content span 
     {
         font-size: 2rem;
+        
     }
     .content p 
     {
@@ -346,5 +396,12 @@ span
     html 
     {
         font-size: 45%;
+    }
+}
+@media(max-width: 300px)
+{
+    .title-about h1 
+    {
+        font-size: 5rem;
     }
 }

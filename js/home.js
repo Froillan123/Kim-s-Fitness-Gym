@@ -13,6 +13,23 @@ var swiper = new Swiper(".home-slider", {
         clickable: true,
     },
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const images = ["images/man-gym.jpg", "images/222.jpg" , "images/f4.jpg", "images/41.jpg", "images/42.jpg"];
+    const imageElement = document.getElementById("home");
+    let currentImageIndex = 0;
+
+    function changeImage() {
+        imageElement.style.backgroundImage = `url(${images[currentImageIndex]})`;
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+    }
+
+    // Initial call to set the background image
+    changeImage();
+
+    // Set up an interval to change the image every 3 seconds (adjust as needed)
+    setInterval(changeImage, 3000);
+});
+
 
 document.addEventListener("DOMContentLoaded", function() {
   
@@ -108,11 +125,41 @@ var testimonials = [
     },
     {
         name: "Joanne",
-        stars: 5,
+        stars: 4,
         content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
     },
     {
         name: "George",
+        stars: 4,
+        content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
+    },
+    {
+        name: "Wilson",
+        stars: 4,
+        content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
+    },
+    {
+        name: "Alexis",
+        stars: 5,
+        content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
+    },
+    {
+        name: "Washington",
+        stars: 4,
+        content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
+    },
+    {
+        name: "Zoro",
+        stars: 5,
+        content: "Nice Gym man! By the way where am I? Did you see Luffy and my crew mates? If you see them tell me."
+    },
+    {
+        name: "Yunhai",
+        stars: 5,
+        content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
+    },
+    {
+        name: "Kenny",
         stars: 5,
         content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
     },
@@ -144,6 +191,24 @@ function showSlide(index) {
     }).join('');
 }
 
+function updateTestimonialsPerSlide() {
+    if (window.innerWidth <= 990) {
+        testimonialsPerSlide = 1;
+    } else {
+        testimonialsPerSlide = 3;
+    }
+
+    // Reset the slide index and show the first slide when the number of testimonials per slide changes
+    currentSlideIndex = 0;
+    showSlide(currentSlideIndex);
+}
+
+// Initial setup
+updateTestimonialsPerSlide();
+
+// Event listener for window resize
+window.addEventListener('resize', updateTestimonialsPerSlide);
+
 function nextSlide() {
     currentSlideIndex = (currentSlideIndex + 1) % Math.ceil(testimonials.length / testimonialsPerSlide);
     showSlide(currentSlideIndex);
@@ -156,7 +221,7 @@ function prevSlide() {
 
 // Display the initial slide
 showSlide(currentSlideIndex);
-var testimonialInterval = setInterval(nextSlide, 3000);
+var testimonialInterval = setInterval(nextSlide, 2000);
 
 function stopTestimonialInterval() {
     clearInterval(testimonialInterval);
@@ -164,20 +229,7 @@ function stopTestimonialInterval() {
 
 testimonialContainer.addEventListener('mouseenter', stopTestimonialInterval);
 testimonialContainer.addEventListener('mouseleave', function () {
-    testimonialInterval = setInterval(nextSlide, 3000);
+    testimonialInterval = setInterval(nextSlide, 2000);
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
-ScrollReveal({ 
-    reset: true,
-    distance: '80px',
-    duration:  1600,
-    delay: 200
-});
-
-
-ScrollReveal().reveal('.home-section2, .heading, ', { origin: 'top' });
-ScrollReveal().reveal('.container, .about-content, .wrapper, .home',  { origin: 'bottom' });
-ScrollReveal().reveal('.about-img, .testimonials, .box',  { origin: 'left' });
-});

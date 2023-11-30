@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="css/pricing.css">
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo" ><i class='bx bx-dumbbell' ></i> Kim's Fitness</a>
+    <header class="header" id="header">
+        <a href="index.html" class="logo" ><i class='bx bx-dumbbell' ></i> Kim's Fitness</a>
         <nav class="navbar">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -22,35 +22,77 @@
             <a href="pricing.html">Pricing</a>
             <a href="class.html">Classes</a>
             <a href="contact.html">Contact</a>
-            <img src="images/moon.png" alt="" id="icon">
+
         </nav>
         <div class="icons">
             <i class='bx bx-menu' id="menu-icon"></i>
             <div class='bx bxs-user' id="loginbtn"></div>
             <a href="contact.html"><i class='bx bxs-chat'id="chat"></i></a>
-            <div class="login-form">
-
-            <div id="close-login-btn" class="fas fa-times"></div>
-         <form action="index.html" id="form">
-                <h3>sign in</h3>
-                <h4>Username</h4>
-                <input type="email" name="" class="box" placeholder="Enter your email" id="username">
-                <h4>Password</h4>
-                <input type="password" name="" class="box" placeholder="Enter your password" id="password">
-                <div id="error"></div>
-                <div class="checkbox">
-                    <input type="checkbox" name="" id="remember-me">
-                    <label for="remember-me"> remember me</label>
-                </div>
-                <input type="submit" value="sign in" class="button">
-                <p>Forgot password? <a href="forgot pass and create acc/forgot.html">Click Here</a></p> 
-                <p>don't have an account ? <a href="forgot pass and create acc/signup.html" id="sign_up">create one</a></p>
-            </form>
-            </div>
-            <div id="error"></div>
     </div>
+
+    <div class="login-form">
+        <div id="close-login-btn" class="fas fa-times"></div>
+        <form action="index.html" id="form">
+               <h3>sign in</h3>
+               <h4>Username</h4>
+               <input type="email" name="" class="box1" placeholder="Enter your email" id="username">
+               <h4>Password</h4>
+               <input type="password" name="" class="box1" placeholder="Enter your password" id="password">
+               <div class="checkbox">
+                   <input type="checkbox" name="" id="remember-me">
+                   <label for="remember-me"> remember me</label>
+               </div>
+               <input type="submit" value="sign in" class="button">
+               <p>Forgot password? <a href="forgot pass and create acc/forgot.html">Click Here</a></p> 
+               <p>don't have an account ? <a href="forgot pass and create acc/signup.html" id="sign_up">create one</a></p>
+           </form>
+           </div>
     </header>
     <div id="head"></div>
+
+    <div class="background" id="background">
+        <h1>Pricing</h1>
+    </div>
+
+    <section class="pricing" id="pricing">
+        <div class="information">
+            <span>Pricing Plan</span>
+            <h3>Affordable Pricing Plan</h3>
+            <p>Our pricing plans are designed to suit your fitness goals and budget. Whether you're a beginner or an experienced fitness enthusiast, we have the right plan for you!</p>
+            <p><i class="fas fa-check"></i>Cardio Exercise</p>
+            <p><i class="fas fa-check"></i>Weight Lifting</p>
+            <p><i class="fas fa-check"></i>Calesthenics</p>
+            <p><i class="fas fa-check"></i>Weight Training</p><br>
+            <a href="#" class="btn">All Pricing</a>
+        </div>
+
+        <div class="plan basic">
+            <h3>Basic Plan</h3>
+            <div class="price"><span>$</span>10 <span>mo</span></div>
+            <div class="list">
+                <p><i class="fas fa-check"></i>Access to Basic Workouts</p>
+                <p><i class="fas fa-check"></i>Cardio Exercise</p>
+                <p><i class="fas fa-check"></i>Strength Training</p>
+                <p><i class="fas fa-check"></i>Nutritional Guidance</p>
+                <p><i class="fas fa-check"></i>Community Support</p>
+            </div><br><br>
+            <center><a href="#" class="btn">Get Started</a></center>
+        </div>
+
+        <div class="plan premium">
+            <h3>Premium Plan</h3>
+            <div class="price"><span>$</span>30 <span>mo</span></div>
+            <div class="list">
+                <p><i class="fas fa-check"></i>Personalized Coaching</p>
+                <p><i class="fas fa-check"></i>Advanced Cardio Workouts</p>
+                <p><i class="fas fa-check"></i>Customized Nutrition Plans</p>
+                <p><i class="fas fa-check"></i>Exclusive Access to Events</p>
+                <p><i class="fas fa-check"></i>24/7 Customer Support</p>
+            </div><br><br>
+            <center><a href="#" class="btn">Get Started</a></center>
+        </div>
+    </section>
+
     
 
 
@@ -74,5 +116,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </body>
 </html>
