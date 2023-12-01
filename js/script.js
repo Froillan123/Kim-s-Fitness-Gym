@@ -29,14 +29,14 @@ document.addEventListener('DOMContentLoaded', function() {
   ScrollReveal({ 
       reset: false,
       distance: '80px',
-      duration:  1600,
-      delay: 200
+      duration:  1500,
+      delay: 170
   });
   
   
-  ScrollReveal().reveal('.home-section2, .heading, .background-gallery, .title-about, .about2, .contact-background, .background', { origin: 'top' });
-  ScrollReveal().reveal('.container, .about-content, .wrapper, .home, .contact, .plan',  { origin: 'bottom' });
-  ScrollReveal().reveal('.testimonials, .box, .about, .background-contact, .tab-links, .information',  { origin: 'left' });
+  ScrollReveal().reveal('.home-section2,.background-gallery, .title-about, .about2, .contact-background, .background, .section__header', { origin: 'top' });
+  ScrollReveal().reveal('.container, .about-content, .wrapper, .home, .contact, .plan, .section__description, .schedule',  { origin: 'bottom' });
+  ScrollReveal().reveal('.testimonials, .box, .about, .background-contact, .tab-links, .information, .class__card',  { origin: 'left' });
   });
 
 
@@ -57,5 +57,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set up an interval to change the image every 3 seconds (adjust as needed)
     setInterval(changeImage, 3000);
 
-    imageElement.style.backgroundAttachment = "fixed";
 });

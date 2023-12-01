@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <!-- custom link css file -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="minify/style.min.css">
+    <link rel="stylesheet" href="minify/home.min.css">
 </head>
 <body>
 
@@ -27,13 +27,10 @@
         <a href="index.html" class="logo" ><i class='bx bx-dumbbell' ></i> Kim's Fitness</a>
         <nav class="navbar">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="schedule.html">Schedule</a>
-            <a href="pricing.html">Pricing</a>
-            <a href="class.html">Classes</a>
-            <a href="contact.html">Contact</a>
-           
+            <a href="about.min.html">About</a>
+            <a href="gallery.min.html">Gallery</a>
+            <a href="pricing.min.html">Pricing</a>
+            <a href="contact.min.html">Contact</a>
         </nav>
         <div class="icons">
             <i class='bx bx-menu' id="menu-icon"></i>
@@ -63,53 +60,10 @@
     <!-- section starts here  -->
     <div id="head"></div>
     <!-- null -->
-    <div id="background"></div> null
+    <div id="background"></div> 
 
     
     <main>
-    <!-- <section class="home" id="home">
-        <div class="swiper home-slider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background: url(images/man-gym.jpg) no-repeat;">
-                    <div class="content">
-                        <span class="span">Be Strong, Be Fit</span>
-                        <h3>Make yourself stronger rather than making excuses</h3>
-                        <a href="class.html" class="btn">Get Started</a>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background: url(images/222.jpg) no-repeat;">
-                    <div class="content">
-                        <span class="span">Be Strong, Be Fit</span>
-                        <h3>Make yourself stronger rather than making excuses</h3>
-                        <a href="class.html" class="btn">Get Started</a>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background: url(images/f4.jpg) no-repeat;">
-                    <div class="content">
-                        <span class="span">Be Strong, Be Fit</span>
-                        <h3>Make yourself stronger rather than making excuses</h3>
-                        <a href="class.html" class="btn">Get Started</a>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background: url(images/41.jpg) no-repeat;">
-                    <div class="content">
-                        <span class="span">Be Strong, Be Fit</span>
-                        <h3>Make yourself stronger rather than making excuses</h3>
-                        <a href="class.html" class="btn">Get Started</a>
-                    </div>
-                </div>
-                <div class="swiper-slide" style="background: url(images/42.jpg) no-repeat;">
-                    <div class="content">
-                        <span class="span">Be Strong, Be Fit</span>
-                        <h3>Make yourself stronger rather than making excuses</h3>
-                        <a href="class.html" class="btn">Get Started</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="swiper-pagination"></div>
-        </div>
-    </section> -->
     <section class="home" id="home">
         <div class="content">
             <span class="span">Be Strong, Be Fit</span>
@@ -277,6 +231,133 @@
     </div>
 </section>
 
+
+
+<section class="schedule swiper-container" id="schedule">
+    <h2 class="section__header">Gym Schedule</h2>
+    
+    <div class="swiper-wrapper">
+        <div class="schedule__day swiper-slide">
+            <h3>Monday</h3>
+            <ul>
+                <li>6:00 AM - Strength Training</li>
+                <li>9:00 AM - Cardio Kickboxing</li>
+                <li>12:00 PM - Midday Mindful Yoga</li>
+                <li>5:00 PM - High-Intensity Interval Training (HIIT)</li>
+            </ul>
+        </div>
+        
+        <!-- Tuesday -->
+        <div class="schedule__day swiper-slide">
+            <h3>Tuesday</h3>
+            <ul>
+                <li>7:30 AM - Spin Class</li>
+                <li>10:00 AM - Pilates Fusion</li>
+                <li>1:00 PM - Powerlifting Mastery</li>
+                <li>6:30 PM - Dance Fusion</li>
+            </ul>
+        </div>
+        
+        <div class="schedule__day swiper-slide">
+            <h3>Wednesday</h3>
+            <ul>
+                <li>6:00 AM - CrossFit Challenge</li>
+                <li>9:30 AM - Yoga for Flexibility & Mobility</li>
+                <li>12:30 PM - Lunchtime Circuit Training</li>
+                <li>5:30 PM - Body Pump Sculpt</li>
+            </ul>
+        </div>
+        
+        <div class="schedule__day swiper-slide">
+            <h3>Thursday</h3>
+            <ul>
+                <li>8:00 AM - Functional Strength Training</li>
+                <li>11:00 AM - Core Conditioning</li>
+                <li>2:00 PM - Lunchtime Boxing Fitness</li>
+                <li>7:00 PM - Spin & Sculpt Fusion</li>
+            </ul>
+        </div>
+        
+        <div class="schedule__day swiper-slide">
+            <h3>Friday</h3>
+            <ul>
+                <li>6:30 AM - Strength and Conditioning</li>
+                <li>10:00 AM - Barre Fitness Elegance</li>
+                <li>1:30 PM - Lunchtime Bootcamp Intensity</li>
+                <li>6:00 PM - Yoga for Relaxation</li>
+            </ul>
+        </div>
+        
+        <div class="schedule__day swiper-slide">
+            <h3>Saturday</h3>
+            <ul>
+                <li>9:00 AM - Weekend Warrior Workout</li>
+                <li>11:30 AM - TRX Suspension Training</li>
+                <li>3:00 PM - Kickboxing Cardio Blast</li>
+                <li>5:30 PM - Dance Party Fitness</li>
+            </ul>
+        </div>
+        
+        <div class="schedule__day swiper-slide">
+            <h3>Sunday</h3>
+            <ul>
+                <li>10:00 AM - Sunday Stretch and Flow</li>
+                <li>1:00 PM - Calisthenics Mastery</li>
+                <li>4:00 PM - Relaxing Tai Chi</li>
+                <li>7:00 PM - Meditation and Mindfulness</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+
+<div class="section__container class__container" id="class">
+    <h2 class="section__header">Our Classes</h2>
+    <p class="section__description">
+      Discover a diverse range of exhilarating classes at our gym designed to
+      cater to all fitness levels and interests. Whether you're a seasoned
+      athlete or just starting your fitness journey, our classes offer
+      something for everyone.
+    </p>
+    <div class="class__grid">
+      <div class="class__card">
+    
+        <img src="images/class-1.jpg" alt="class" />
+        <div class="class__content">
+          <h4>Strength Training</h4>
+          <p>Resistance Training</p>
+        </div>
+      </div>
+      <div class="class__card">
+    
+        <img src="images/class-2.jpg" alt="class" />
+        <div class="class__content">
+          <h4>Flexibility & Mobility</h4>
+          <p>Yoga & Pilates</p>
+        </div>
+      </div>
+      <div class="class__card">
+       
+        <img src="images/class-3.jpg" alt="class" />
+        <div class="class__content">
+          <h4>HIIT</h4>
+          <p>Circuit Training</p>
+        </div>
+      </div>
+      <div class="class__card">
+        
+        <img src="images/class-4.jpg" alt="class" />
+        <div class="class__content">
+          <h4>Group Fitness</h4>
+          <p>Zumba or Dance</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
 <section class="testimonials" id="testimonials">
     <div class="inner"> <br><br>
         <h2 class="title">Testimonials</h2>
@@ -317,8 +398,8 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
    
     <!-- custom js file -->
-    <script src="js/home.js"></script>
+    <script src="minify/home.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="js/script.js"></script>
+    <script src="minify/script.min.js"></script>
 </body>
 </html>

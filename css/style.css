@@ -31,6 +31,14 @@
     ;
     --green:#27ae60;
     --grid-gap: 3rem;
+    --primary-color: #f92524;
+  --primary-color-dark: #e91a1a;
+  --secondary-color: #faf9fe;
+  --text-dark: #0f172a;
+  --text-light: #64748b;
+  --white: #ffffff;
+  --max-width: 1200px;
+
 }
 body
 {
@@ -78,9 +86,9 @@ html
 }
 .navbar a
 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: var(--text-color);
-    margin: .9rem; 
+    margin: 1.6rem;
     position: relative;
     flex: 1;
 }
@@ -200,7 +208,7 @@ html
     position: absolute;
     top:1.5rem; right:2.5rem;
     font-size: 5rem;
-    color:var(--black);
+    color: #fff;
     cursor: pointer;
 }
 

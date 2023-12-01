@@ -93,77 +93,70 @@ function scrollCarousel(direction) {
 
   
 
-document.addEventListener('DOMContentLoaded', () => {
-    const prevButton = document.querySelector('.prev-button');
-    const nextButton = document.querySelector('.next-button');
-
-    prevButton.addEventListener('click', () => scrollCarousel('prev'));
-    nextButton.addEventListener('click', () => scrollCarousel('next'));
-});
-
 var testimonials = [
     {
         name: "Axel",
         stars: 4,
-        content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
+        content: "Impressive gym! The variety of equipment keeps me coming back every day. The friendly atmosphere is a bonus."
     },
     {
         name: "Ericka",
         stars: 5,
-        content: "I like this gym because the owner is very kind and he recommends me how to execute the technique."
+        content: "I'm a fan of this gym because the owner's kindness stands out. His technique recommendations have greatly improved my workouts."
     },
     {
         name: "Richard",
         stars: 5,
-        content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
+        content: "Outstanding Gym! Daily visits are a must for me. The top-notch equipment and welcoming atmosphere make it my fitness haven."
     },
     // Add more testimonials as needed
     {
         name: "Jin",
         stars: 5,
-        content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
+        content: "Awesome Gym! I'll be here daily. The top-notch equipment and friendly atmosphere create the perfect workout setting for me."
     },
     {
         name: "Joanne",
         stars: 4,
-        content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
+        content: "Fantastic Gym! Daily visits are part of my routine. The top-notch equipment and friendly atmosphere make it a joy to work out here."
     },
     {
         name: "George",
         stars: 4,
-        content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
+        content: "Excellent Gym! Daily workouts are a pleasure here. The top-notch equipment and friendly atmosphere make it a standout fitness spot."
     },
     {
         name: "Wilson",
         stars: 4,
-        content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
+        content: "Superb Gym! I'm a regular here, thanks to the top-notch equipment and friendly atmosphere. It's the perfect place for my fitness journey."
     },
     {
         name: "Alexis",
         stars: 5,
-        content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
+        content: "Exceptional Gym! Daily visits are a must for me. The top-notch equipment and friendly atmosphere make it my go-to fitness destination."
     },
     {
         name: "Washington",
         stars: 4,
-        content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
+        content: "Top-notch Gym! Regular visits are on my agenda. The quality equipment and friendly atmosphere contribute to a fantastic workout experience."
     },
     {
         name: "Zoro",
         stars: 5,
-        content: "Nice Gym man! By the way where am I? Did you see Luffy and my crew mates? If you see them tell me."
+        content: "Interesting Gym! By the way, where am I? Have you seen Luffy and my crewmates? If you spot them, let me know."
     },
     {
         name: "Yunhai",
         stars: 5,
-        content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
+        content: "Amazing Gym! I'll be here every day. The top-notch equipment and friendly atmosphere make it the ideal place for my fitness routine."
     },
     {
         name: "Kenny",
         stars: 5,
-        content: "Nice Gym man! I will come here every day. Your gym has top-notch equipment and a friendly atmosphere."
+        content: "Terrific Gym! Daily visits are a must. The top-notch equipment and friendly atmosphere make it a standout fitness spot."
     },
 ];
+
 
 var testimonialsPerSlide = 3;
 var currentSlideIndex = 0;
@@ -221,7 +214,7 @@ function prevSlide() {
 
 // Display the initial slide
 showSlide(currentSlideIndex);
-var testimonialInterval = setInterval(nextSlide, 2000);
+var testimonialInterval = setInterval(nextSlide, 5000);
 
 function stopTestimonialInterval() {
     clearInterval(testimonialInterval);
@@ -229,7 +222,32 @@ function stopTestimonialInterval() {
 
 testimonialContainer.addEventListener('mouseenter', stopTestimonialInterval);
 testimonialContainer.addEventListener('mouseleave', function () {
-    testimonialInterval = setInterval(nextSlide, 2000);
+    testimonialInterval = setInterval(nextSlide, 5000);
 });
+
+
+
+var swiper = new Swiper(".swiper-container", {
+    spaceBetween: 10,
+    grabCursor:true,
+    loop:true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 9500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3
+,
+      },
+    },
+  });
 
 
